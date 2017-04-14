@@ -35,6 +35,8 @@ public final class BasicJavaUI
 	
 	private int successCount = 0;
 
+	private List<Data> dataList;
+
 	public BasicJavaUI()
 	{
 		myFrame = new JFrame();
@@ -42,7 +44,7 @@ public final class BasicJavaUI
 		myMenu = new JMenu("Options");
 		myMenuItem = new JMenuItem("About");
 		myLogin = new JPanel();
-
+		dataList = new ArrayList<Data>();
 	}
 
 	public void start()
@@ -62,7 +64,7 @@ public final class BasicJavaUI
 
 	public void dataStore(String name, String email)
 	{
-		List<Data> dataList = new ArrayList<Data>();
+		dataList = new ArrayList<Data>();
 		Data newEntry = new Data(name, email);
 		dataList.add(newEntry);
 	}
